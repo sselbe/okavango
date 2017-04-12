@@ -1,0 +1,18 @@
+Calibrating the pH
+
+- clean vessels using the storage fluid, wait for each to dry
+- fill vessels with 4.00, 7.00, 10.00 solutions
+- remove probe from storage fluid
+- look for air bubble, and remove bubble by gently shaking the probe
+- rinse probe with filtered lake water
+- start calibration program
+- submerge probe into 7.00 solution
+- wait 2-4 minutes
+- hit enter on `cal,mid,7.00>` prompt
+- rinse probe, submerge in 4.00 solution, wait 2-4 minutes
+- hit enter on `cal,low,4.00>` prompt
+- rinse probe, submerge in 10.00 solution, wait 2-4 minutes
+- hit enter on `cal,high,10.00>` prompt
+- hit enter until we get to `r>` prompt
+- while probe is still in 10.00 solution, record reading
+

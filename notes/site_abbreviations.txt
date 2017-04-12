@@ -1,0 +1,9 @@
+CT: Cuito source lake
+CV: Cuanavale source lake
+KM: Kembo source lake
+HL: Menongue Base
+CD: Cuando source lake
+LB: Lunge-Bungo River source
+CB: Cubango River source
+NG: Ngepi Camp
+SH: Shakawe River Lodge

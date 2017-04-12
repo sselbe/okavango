@@ -1,0 +1,131 @@
+// TEST #1
+
+> ph
+Ph Mode
+c,0>
+c,0
+# *OK
+l,1>
+l,1
+# *OK
+cal,clear>
+cal,clear
+# *OK
+// let probe sit in 7.00 solution for 2 minutes
+cal,mid,7.00>
+cal,mid,7.00
+# *OK
+// let probe sit in 4.00 solution for 2 minutes
+cal,low,4.00>
+cal,low,4.00
+# *OK
+// let probe sit in 10.00 solution for 2 minutes
+cal,high,10.00>
+cal,high,10.00
+# *OK
+l,0>
+l,0
+# *OK
+// probe is still in 10.0 solution
+r>
+r
+# 10.844
+# 10.844
+*OK
+> ph
+Ph Mode
+c,0>
+c,0
+# *OK
+l,1>
+l,1
+# *OK
+cal,clear> +
+cal,mid,7.00> +
+cal,low,4.00> +
+cal,high,10.00> +
+l,0>
+l,0
+# *OK
+// let probe sit in 7.00 solution for 2 minutes
+r>
+r
+# 7.810
+# 7.810
+*OK
+// probe still in 7.00 solution 30 more seconds...
+> $r
+r
+# 7.578
+# 7.578
+*OK
+// probe still in 7.0 solution one more minute
+> $r
+r
+# 8.239
+# 8.239
+*OK
+> ph
+Ph Mode
+c,0> +
+l,1> +
+cal,clear> +
+cal,mid,7.00> +
+cal,low,4.00> +
+cal,high,10.00> +
+l,0> +
+// 1 minute later, probe still in 7.0 solution
+r>
+r
+# 7.730
+# 7.730
+*OK
+
+
+// TEST #2
+
+core: SD missing on 16
+Loop
+^M^M
+
+
+# *ER
+> ph
+Ph Mode
+c,0>
+c,0
+# *OK
+l,1>
+l,1
+# *OK
+cal,clear>
+cal,clear
+# *OK
+// let probe sit in 7.00 solution for 4 minutes
+cal,mid,7.00>
+cal,mid,7.00
+# *OK
+// let probe sit in 4.00 solution for 4 minutes
+cal,low,4.00>
+cal,low,4.00
+# *OK
+// let probe sit in 10.00 solution for 4 minutes
+cal,high,10.00>
+cal,high,10.00
+# *OK
+l,0>
+l,0
+# *OK
+// probe still in 10.00 solution
+r>
+r
+# 6.958
+# 6.958
+*OK
+// probe still in 10.00 solution
+> $r
+r
+# 6.794
+# 6.794
+*OK
+>
